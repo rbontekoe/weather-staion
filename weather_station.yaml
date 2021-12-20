@@ -1,0 +1,10 @@
+# filename: weather_station.yaml
+
+# This app specification file executes the 'Weather Station' app on install
+# and subsequently every 30 seconds.
+
+name: Weather Station
+entrypoint: dsp.toit
+triggers:
+  on_install: true
+  on_interval: 300s
