@@ -13,13 +13,13 @@ import pixel_display.texture show *
 import pixel_display.two_color show *  // Provides WHITE and BLACK.
 import pixel_display show *
 
-get_display -> TwoColorPixelDisplay busje:
+get_display -> TwoColorPixelDisplay bus:
   
-  devices := busje.scan
+  devices := bus.scan
   
   if not devices.contains SSD1306_ID: throw "No SSD1306 display found"
   
-  driver := SSD1306 (busje.device 0x3c)
+  driver := SSD1306 (bus.device 0x3c)
   
   return TwoColorPixelDisplay driver
 
